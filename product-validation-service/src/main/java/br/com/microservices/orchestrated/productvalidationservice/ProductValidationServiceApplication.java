@@ -9,5 +9,4 @@ public class ProductValidationServiceApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ProductValidationServiceApplication.class, args);
 	}
-
 }
