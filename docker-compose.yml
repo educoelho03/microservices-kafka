@@ -93,8 +93,8 @@ services:
     build: './order-service'
     container_name: order-service
     depends_on:
-      - kafka
       - order-db
+      - kafka
     networks:
       - orchestrator-saga
     environment:
@@ -126,7 +126,7 @@ services:
     environment:
       - KAFKA_BROKER=kafka:29092
       - DB_HOST=product-db
-      - DB_PÓRT=5432
+      - DB_PÓRT=5433
       - DB_USER=postgres
       - DB_PASSWORD=postgres
     ports:
@@ -144,7 +144,7 @@ services:
       - KAFKA_BROKER=kafka:29092
       - DB_HOST=payment-db
       - DB_NAME=payment-db
-      - DB_PÓRT=5432
+      - DB_PÓRT=5434
       - DB_USER=postgres
       - DB_PASSWORD=postgres
     ports:
@@ -162,7 +162,7 @@ services:
       - KAFKA_BROKER=kafka:29092
       - DB_HOST=inventory-db
       - DB_NAME=inventory-db
-      - DB_PÓRT=5432
+      - DB_PÓRT=5435
       - DB_USER=postgres
       - DB_PASSWORD=postgres
     ports:
